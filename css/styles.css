@@ -3,8 +3,17 @@
   margin: 0;
 }
 
+body {
+  background-image: url(../img/misha_oboi.jpg);
+}
+
 .header {
   margin-bottom: 50px;
+  background-color: gray;
+}
+
+.header:hover {
+  background-color: green;
 }
 
 .header__nav {
@@ -12,7 +21,6 @@
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  background-color: gray;
   padding-top: 10px;
   padding-right: 240px;
   padding-left: 240px;
@@ -43,8 +51,17 @@
 }
 
 .main__logo {
-  max-width: 800px;
+  width: 800px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   margin-bottom: 50px;
+  background-image: url(../img/giga_CVOH.png);
+}
+
+.main__logo:hover {
+  background-image: url(../img/SVOH_monster.png);
 }
 
 .main__form {
@@ -54,11 +71,29 @@
   justify-content: space-between;
 }
 
+.form__label {
+  color: black;
+}
+
+.form__label:hover {
+  color: lightgreen;
+}
+
+.form__input:hover {
+  background-color: green;
+}
+
 .form__btn {
   width: 300px;
   height: 100px;
-  background-color: lightblue;
+  background-color: green;
   border-radius: 10px;
+}
+
+.form__btn:hover {
+  background-color: transparent;
+  color: transparent;
+  border: transparent;
 }
 
 .footer {
