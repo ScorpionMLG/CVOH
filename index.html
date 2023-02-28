@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -24,21 +25,28 @@
         <li class="header__item"><a class="header__link" href="#">О нас</a></li>
         <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
         <li class="header__item"><a class="header__link" href="#">Чат-бот "Егор"</a></li>
-        <li class="header__item setup"><svg class="setup__img" version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="10.000000pt" height="18.000000pt" viewBox="0 0 123.000000 429.000000"
-            preserveAspectRatio="xMidYMid meet">
+        <li class="header__item setup"><svg id="setup" class="setup__img" version="1.0"
+            xmlns="http://www.w3.org/2000/svg" width="10.000000pt" height="18.000000pt"
+            viewBox="0 0 123.000000 429.000000" preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,429.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
               <path d="M445 4251 c-266 -76 -452 -342 -431 -613 20 -244 167 -436 404 -526
-         59 -23 82 -26 192 -26 110 0 133 3 192 26 100 38 173 85 238 155 70 74 104
-         130 136 221 111 321 -83 679 -416 767 -76 20 -239 18 -315 -4z" />
+          59 -23 82 -26 192 -26 110 0 133 3 192 26 100 38 173 85 238 155 70 74 104
+          130 136 221 111 321 -83 679 -416 767 -76 20 -239 18 -315 -4z" />
               <path d="M485 2734 c-230 -49 -412 -234 -459 -466 -20 -97 -20 -139 0 -236 20
-         -101 73 -206 140 -280 262 -290 730 -255 944 71 126 193 126 461 0 654 -86
-         131 -226 225 -382 257 -93 19 -151 19 -243 0z" />
+          -101 73 -206 140 -280 262 -290 730 -255 944 71 126 193 126 461 0 654 -86
+          131 -226 225 -382 257 -93 19 -151 19 -243 0z" />
               <path d="M495 1210 c-119 -25 -238 -93 -321 -181 -174 -186 -209 -442 -93
-         -678 72 -147 217 -265 375 -306 81 -21 233 -20 315 3 196 54 355 214 415 417
-         21 72 24 237 5 305 -54 194 -197 347 -389 417 -74 28 -233 40 -307 23z" />
+          -678 72 -147 217 -265 375 -306 81 -21 233 -20 315 3 196 54 355 214 415 417
+          21 72 24 237 5 305 -54 194 -197 347 -389 417 -74 28 -233 40 -307 23z" />
             </g>
-          </svg></li>
+          </svg>
+          <div id="setup-list" class="setup-list setup-list-hidden">
+            <p class="btn-text">Сменить тему</p>
+            <div id="theme-btn" class="theme-btn">
+              <div id="switch" class="switch"></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 

@@ -69,20 +69,83 @@ body {
 }
 
 .setup {
+  position: relative;
+  width: 31.5px;
   cursor: pointer;
+  margin: 0 10px;
+  border-radius: 10px;
 }
 
 .setup__img {
-  height: 18px;
-  margin: 0 20px;
-}
-
-.setup__img g {
+  position: absolute;
+  padding: 11px 19px;
+  height: 16px;
+  left: -10px;
+  top: -10px;
+  border-radius: 10px;
   transition: all .3s ease-in-out;
 }
 
-.setup__img:hover g {
-  fill: lightgray;
+.setup__img:hover {
+  background-color: gray;
+}
+
+.setup-list {
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  width: 250px;
+  height: 40px;
+  background-color: var(--color-main);
+  transition: all .3s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-text {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.setup-list-hidden {
+  top: 30px;
+  background-color: transparent;
+  visibility: hidden;
+}
+
+.setup-list-hidden .theme-btn {
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.setup-list-hidden .switch {
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.setup-list-hidden .btn-text {
+  color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.theme-btn {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  right: 10px;
+  bottom: 5px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px 0 0 10px;
+  background-color: wheat;
 }
 
 .main {
