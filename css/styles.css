@@ -123,6 +123,7 @@ body {
   background-color: var(--color-main);
   transition: all .3s ease-in-out;
   border-radius: 0 0 10px 10px;
+  cursor: auto;
 }
 
 .btn-text {
@@ -159,6 +160,7 @@ body {
   right: 10px;
   bottom: 5px;
   border-radius: 10px;
+  cursor: pointer;
   background-color: var(--color-hover);
 }
 
