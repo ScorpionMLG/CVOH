@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
   <script defer src="js/script.js"></script>
 </head>
 
-<body>
+<body class="theme-auto">
 
   <header class="header">
 
@@ -25,7 +25,7 @@
         <li class="header__item"><a class="header__link" href="#">О нас</a></li>
         <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
         <li class="header__item"><a class="header__link" href="#">Чат-бот "Егор"</a></li>
-        <li class="header__item setup"><svg id="setup" class="setup__img" version="1.0"
+        <li id="parent" class="header__item setup"><svg id="setup" class="setup__img" version="1.0"
             xmlns="http://www.w3.org/2000/svg" width="10.000000pt" height="18.000000pt"
             viewBox="0 0 123.000000 429.000000" preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,429.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -43,7 +43,7 @@
           <div id="setup-list" class="setup-list setup-list-hidden">
             <p class="btn-text">Сменить тему</p>
             <div id="theme-btn" class="theme-btn">
-              <div id="switch" class="switch"></div>
+              <div id="switcher" class="switcher switcher-auto"></div>
             </div>
           </div>
         </li>

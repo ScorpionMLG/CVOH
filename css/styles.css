@@ -1,7 +1,27 @@
 :root {
-  --color-black: black;
-  --color-white: white;
-  --color-main: #747474;
+  --light-color-text: white;
+  --light-color-text-light: green;
+  --light-color-hover: red;
+  --light-color-main: purple;
+  /* пока что светлая тема - рофланебало */
+  --dark-color-text: black;
+  --dark-color-text-light: white;
+  --dark-color-hover: gray;
+  --dark-color-main: #747474;
+}
+
+body.theme-light {
+  --color-text: var(--light-color-text);
+  --color-text-light: var(--light-color-text-light);
+  --color-hover: var(--light-color-hover);
+  --color-main: var(--light-color-main);
+}
+
+body.theme-dark {
+  --color-text: var(--dark-color-text);
+  --color-text-light: var(--dark-color-text-light);
+  --color-hover: var(--dark-color-hover);
+  --color-main: var(--dark-color-main);
 }
 
 * {
@@ -10,7 +30,7 @@
 }
 
 a {
-  color: var(--color-black);
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -21,7 +41,7 @@ body {
 
 .header {
   background-color: var(--color-main);
-  /* box-shadow: 0 -10px 50px var(--color-black); Было бы круто наебенить тень у header */
+  /* box-shadow: 0 -10px 50px var(--color-text); Было бы круто наебенить тень у header */
   transition: all .3s ease-in-out;
   margin-bottom: 100px;
 }
@@ -40,13 +60,13 @@ body {
 .header__list {
   display: flex;
   align-items: center;
-  outline: 1.5px solid var(--color-black);
+  outline: 1.5px solid var(--color-text);
   padding: 10px 0;
   border-radius: 10px;
 }
 
 .header__item:not(:last-child) {
-  border-right: 1.5px solid var(--color-black);
+  border-right: 1.5px solid var(--color-text);
 }
 
 .header__link {
@@ -57,7 +77,7 @@ body {
 }
 
 .header__link:hover {
-  background-color:  gray;
+  background-color: var(--color-hover);
 }
 
 .header__img {
@@ -86,8 +106,12 @@ body {
   transition: all .3s ease-in-out;
 }
 
+.setup__img g {
+  fill: var(--color-text);
+}
+
 .setup__img:hover {
-  background-color: gray;
+  background-color: var(--color-hover);
 }
 
 .setup-list {
@@ -118,7 +142,7 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.setup-list-hidden .switch {
+.setup-list-hidden .switcher {
   background-color: transparent;
   transition: all .3s ease-in-out;
 }
@@ -135,18 +159,51 @@ body {
   right: 10px;
   bottom: 5px;
   border-radius: 10px;
-  background-color: gray;
+  background-color: var(--color-hover);
 }
 
-.switch {
+.switcher {
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
   height: 30px;
   border-radius: 10px 0 0 10px;
-  background-color: wheat;
+  background-color: yellow;
+  transition: all .3s ease-in-out;
 }
+
+.switcher-dark {
+  left: 30px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.switcher-light {
+  left: 60px;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --color-main: var(--dark-color-main);
+    --color-text: var(--dark-color-text);
+    --color-text-light: var(--dark-color-text-light);
+    --color-hover: var(--dark-color-hover);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body.theme-auto {
+    --color-main: var(--ligth-color-main);
+    --color-text: var(--ligth-color-text);
+    --color-text-light: var(--ligth-color-text-light);
+    --color-hover: var(--ligth-color-hover);
+  }
+}
+
+/* можно прикрутить иконки svgшки для каждого состояния switcherа */
 
 .main {
   margin-bottom: 100px;
@@ -202,11 +259,12 @@ body {
   height: 50px;
   background-color: var(--color-main);
   border-radius: 10px;
+  cursor: pointer;
   transition: all .3s ease-in-out;
 }
 
 .form__btn:hover {
-  background-color: red;
+  background-color: var(--color-hover);
 }
 
 .footer {
@@ -214,6 +272,10 @@ body {
   align-items: center;
   height: 80px;
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: var(--color-text);
   padding-left: 50px;
+}
+
+.footer__rights {
+  color: var(--color-text-light);
 }
