@@ -256,7 +256,7 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
 /* можно прикрутить иконки svgшки для каждого состояния switcherа */
 
 .main {
-  margin-bottom: 100px;
+  margin-bottom: 105px;
 }
 
 .container {
@@ -293,12 +293,13 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
 }
 
 .form__input {
-  width: 200px;
-  height: 30px;
+  width: 100px;
   border-radius: 10px;
   transition: all .3s ease-in-out;
   margin-bottom: 20px;
   background-color: var(--color-input);
+  padding: 9px 50px;
+  border: 2px solid var(--color-text);
 }
 
 .form__input:hover {
@@ -306,13 +307,13 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
 }
 
 .form__btn {
-  width: 200px;
-  height: 50px;
   background-color: var(--color-main);
   border-radius: 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;
   color: var(--color-text);
+  padding: 9px 30px;
+  border: 2px solid var(--color-text);
 }
 
 .form__btn:hover {
@@ -323,7 +324,7 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
   display: flex;
   align-items: center;
   height: 80px;
-  background-color: var(--color-text-light);
+  background-color: var(--color-main);
   padding-left: 50px;
 }
 
