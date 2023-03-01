@@ -363,6 +363,8 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
   opacity: 0;
 }
 
+/* git на сайте не может медиа запросы подрубить??!17? */
+
 
 @media (max-width: 1024px) {
 
