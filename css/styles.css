@@ -353,9 +353,10 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
   position: absolute;
   height: 30px;
   width: 90px;
-  top: 22px;
-  right: 75px;
+  top: 20px;
+  right: 80px;
   transition: all .3s ease-in-out;
+  border-radius: 10px;
 }
 
 .adaptive-settings-hidden {
@@ -406,8 +407,15 @@ body.theme-dark .header .header__nav .header__logo .header__img g {
     display: inline-block;
   }
 
+  .adaptive-btn-change {
+    width: 90px;
+    height: 30px;
+    background-color: var(--color-hover);
+    border-radius: 11px;
+  }
+
   .main__logo {
-    width: 300px;
+    width: 280px;
   }
 
   .adaptive-settings {
